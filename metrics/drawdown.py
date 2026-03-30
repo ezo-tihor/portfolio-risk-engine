@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-def drawdown(returns : pd.Series):
+def drawdown(returns : pd.Series) -> tuple:
 
     cumulative = (1 + returns).cumprod()
     peak = cumulative.cummax()
